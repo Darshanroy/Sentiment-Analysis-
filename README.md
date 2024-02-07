@@ -34,4 +34,6 @@ The sentiment analysis application can perform both supervised and unsupervised 
 
 ## Approach
 
+---
 ![Image Description](Image-files/training Phase.png)
+
