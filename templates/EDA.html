@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis and Visualization</title>
+    <!-- Plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- Basic Python Libraries -->
+    <h2>Basic Python Libraries</h2>
+    <ol>
+        <li>Pandas – library for data analysis and data manipulation</li>
+        <li>Matplotlib – library used for data visualization</li>
+        <li>Seaborn – a library based on matplotlib and it provides a high-level interface for data visualization</li>
+        <li>WordCloud – library to visualize text data</li>
+        <li>re – provides functions to pre-process the strings as per the given regular expression</li>
+    </ol>
+
+    <!-- Natural Language Processing -->
+    <h2>Natural Language Processing</h2>
+    <ol>
+        <li>nltk – Natural Language Toolkit is a collection of libraries for natural language processing</li>
+        <li>stopwords – a collection of words that don’t provide any meaning to a sentence</li>
+        <li>WordNetLemmatizer – used to convert different forms of words into a single item but still keeping the context intact.</li>
+    </ol>
+
+    <!-- Count Plot -->
+    <h2>Count Plot</h2>
+    <div id="count_plot"></div>
+
+    <!-- Word Cloud -->
+    <h2>Word Cloud</h2>
+    <div id="word_cloud"></div>
+
+    <!-- JavaScript for Plotly and WordCloud -->
+    <script>
+        // Define custom colors for the plot
+        var custom_colors = ['#434247', '#5c5066', '#febc68', '#fcdb8c', '#149589', '#41c0b5'];
+
+        // Fetch Plotly data from Python script
+        var plot_data = {{ plot_data | tojson }};
+
+        // Create the count plot using Plotly
+        Plotly.newPlot('count_plot', plot_data);
+
+        // Fetch WordCloud image data from Python script
+        var word_cloud_data = "{{ word_cloud_data | safe }}";
+
+        // Display the WordCloud image
+        document.getElementById('word_cloud').innerHTML = word_cloud_data;
+    </script>
+</body>
+</html>

@@ -1,10 +1,9 @@
-<!-- input.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Input Form</title>
+    <title>Sentiment Analysis</title> <!-- Large title outside the div -->
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -12,18 +11,26 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Align elements in a column */
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
             height: 100vh;
             margin: 0;
+            padding: 20px;
+            position: relative; /* Position relative for absolute positioning */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #149589; /* Match color with the button */
         }
         .form-container {
             width: 50%;
             max-width: 500px;
-            padding: 20px;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
         textarea {
             width: 100%;
@@ -42,13 +49,29 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            display: block; /* Make the submit button a block-level element */
+            width: 100%; /* Full width */
         }
         input[type="submit"]:hover {
             background-color: #41c0b5;
         }
+        /* Style for small button */
+        .small-btn {
+            position: absolute;
+            top: 20px; /* Adjust top position as needed */
+            right: 20px; /* Adjust right position as needed */
+            background-color: #149589;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
+    <h1>Sentiment Analysis</h1> <!-- Large title -->
     <div class="form-container">
         <h2 class="text-center mb-4">Enter Text</h2>
         <form action="/result" method="post">
@@ -56,5 +79,7 @@
             <input type="submit" class="btn btn-primary btn-block" value="Submit">
         </form>
     </div>
+    <!-- EDA button -->
+    <a href="/eda" class="small-btn">EDA</a>
 </body>
 </html>

@@ -9,9 +9,6 @@ from zenml import pipeline
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
-
-
-
 #object of WordNetLemmatizer
 lm = WordNetLemmatizer()
 
