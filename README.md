@@ -37,3 +37,11 @@ The sentiment analysis application can perform both supervised and unsupervised 
 ---
 ![Image Description](Image-files/training Phase.png)
 
+```bash
+docker run -d -p 5000:5000 falsk-app
+
+```python
+python application.py
+
+---
+Conclusion: The application serves as a practical platform for honing skills in developing end-to-end projects, integrating various MLOps tools for efficient machine learning model deployment and management. Leveraging the Flask framework, it provides a robust foundation for building scalable and interactive web applications. Through hands-on experience with MLOps techniques and Flask development, users can enhance their proficiency in deploying machine learning models seamlessly into production environments, contributing to the advancement of data-driven solutions across diverse domains.
