@@ -1,0 +1,6 @@
+flask
+zenml
+mlflow
+pandas
+nltk
+scipy
