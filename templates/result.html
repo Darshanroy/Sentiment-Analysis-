@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .label-text {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .score-text {
+            font-size: 1.5rem;
+            color: #6c757d;
+        }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Sentiment Analysis Result</h1>
+        <div class="row justify-content-center">
+            <div class="col">
+                <ul class="list-unstyled">
+                    {% for item in text_input %}
+                        <li>
+                            <h2 class="label-text {% if item[0]['label'] == 'positive' %} positive {% else %} negative {% endif %}">
+                                {{ item[0]['label'] }}
+                            </h2>
+                            <p class="score-text">Score: {{ item[0]['score'] }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

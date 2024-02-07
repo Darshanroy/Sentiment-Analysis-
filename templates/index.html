@@ -1,0 +1,60 @@
+<!-- input.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            width: 50%;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #149589;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #41c0b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="text-center mb-4">Enter Text</h2>
+        <form action="/result" method="post">
+            <textarea class="form-control" name="text_input" rows="6"></textarea><br>
+            <input type="submit" class="btn btn-primary btn-block" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

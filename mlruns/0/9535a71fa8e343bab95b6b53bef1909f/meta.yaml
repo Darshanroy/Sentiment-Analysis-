@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/91845/Desktop/Sentiment%20Analysis/SA2/mlruns/0/9535a71fa8e343bab95b6b53bef1909f/artifacts
+end_time: 1707156083500
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9535a71fa8e343bab95b6b53bef1909f
+run_name: lyrical-sheep-224
+run_uuid: 9535a71fa8e343bab95b6b53bef1909f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707156083417
+status: 4
+tags: []
+user_id: BAR_DAR_03
